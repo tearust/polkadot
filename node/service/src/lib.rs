@@ -28,10 +28,10 @@ use {
 	std::convert::TryInto,
 	std::time::Duration,
 	tracing::info,
-	polkadot_node_core_av_store::Config as AvailabilityConfig,
-	polkadot_node_core_av_store::Error as AvailabilityError,
-	polkadot_node_core_proposer::ProposerFactory,
-	polkadot_overseer::{AllSubsystems, BlockInfo, Overseer, OverseerHandler},
+	pnc_av_store::Config as AvailabilityConfig,
+	pnc_av_store::Error as AvailabilityError,
+	pnc_proposer::ProposerFactory,
+	pnu_overseer::{AllSubsystems, BlockInfo, Overseer, OverseerHandler},
 	polkadot_primitives::v1::ParachainHost,
 	sc_authority_discovery::Service as AuthorityDiscoveryService,
 	sp_blockchain::HeaderBackend,
@@ -119,7 +119,7 @@ pub enum Error {
 	Consensus(#[from] consensus_common::Error),
 
 	#[error("Failed to create an overseer")]
-	Overseer(#[from] polkadot_overseer::SubsystemError),
+	Overseer(#[from] pnu_overseer::SubsystemError),
 
 	#[error(transparent)]
 	Prometheus(#[from] prometheus_endpoint::PrometheusError),
@@ -380,23 +380,23 @@ where
 	RuntimeClient::Api: ParachainHost<Block>,
 	Spawner: 'static + SpawnNamed + Clone + Unpin,
 {
-	use polkadot_node_subsystem_util::metrics::Metrics;
+	use pnu_subsystem_util::metrics::Metrics;
 
-	use polkadot_availability_distribution::AvailabilityDistributionSubsystem;
-	use polkadot_node_core_av_store::AvailabilityStoreSubsystem;
-	use polkadot_availability_bitfield_distribution::BitfieldDistribution as BitfieldDistributionSubsystem;
-	use polkadot_node_core_bitfield_signing::BitfieldSigningSubsystem;
-	use polkadot_node_core_backing::CandidateBackingSubsystem;
-	use polkadot_node_core_candidate_selection::CandidateSelectionSubsystem;
-	use polkadot_node_core_candidate_validation::CandidateValidationSubsystem;
-	use polkadot_node_core_chain_api::ChainApiSubsystem;
-	use polkadot_node_collation_generation::CollationGenerationSubsystem;
-	use polkadot_collator_protocol::{CollatorProtocolSubsystem, ProtocolSide};
-	use polkadot_network_bridge::NetworkBridge as NetworkBridgeSubsystem;
-	use polkadot_pov_distribution::PoVDistribution as PoVDistributionSubsystem;
-	use polkadot_node_core_provisioner::ProvisioningSubsystem as ProvisionerSubsystem;
-	use polkadot_node_core_runtime_api::RuntimeApiSubsystem;
-	use polkadot_statement_distribution::StatementDistribution as StatementDistributionSubsystem;
+	use pnn_availability_distribution::AvailabilityDistributionSubsystem;
+	use pnc_av_store::AvailabilityStoreSubsystem;
+	use pnn_bitfield_distribution::BitfieldDistribution as BitfieldDistributionSubsystem;
+	use pnc_bitfield_signing::BitfieldSigningSubsystem;
+	use pnc_backing::CandidateBackingSubsystem;
+	use pnc_candidate_selection::CandidateSelectionSubsystem;
+	use pnc_candidate_validation::CandidateValidationSubsystem;
+	use pnc_chain_api::ChainApiSubsystem;
+	use pnu_collation_generation::CollationGenerationSubsystem;
+	use pnn_collator_protocol::{CollatorProtocolSubsystem, ProtocolSide};
+	use pnn_bridge::NetworkBridge as NetworkBridgeSubsystem;
+	use pnn_pov_distribution::PoVDistribution as PoVDistributionSubsystem;
+	use pnc_provisioner::ProvisioningSubsystem as ProvisionerSubsystem;
+	use pnc_runtime_api::RuntimeApiSubsystem;
+	use pnn_statement_distribution::StatementDistribution as StatementDistributionSubsystem;
 
 	let all_subsystems = AllSubsystems {
 		availability_distribution: AvailabilityDistributionSubsystem::new(
@@ -563,7 +563,7 @@ pub fn new_full<RuntimeApi, Executor>(
 	let shared_voter_state = rpc_setup;
 
 	#[cfg(feature = "real-overseer")]
-	config.network.notifications_protocols.extend(polkadot_network_bridge::notifications_protocol_info());
+	config.network.notifications_protocols.extend(pnn_bridge::notifications_protocol_info());
 	config.network.notifications_protocols.push(grandpa::GRANDPA_PROTOCOL_NAME.into());
 
 	let (network, network_status_sinks, system_rpc_tx, network_starter) =
@@ -674,7 +674,7 @@ pub fn new_full<RuntimeApi, Executor>(
 		task_manager.spawn_essential_handle().spawn_blocking("overseer", Box::pin(async move {
 			use futures::{pin_mut, select, FutureExt};
 
-			let forward = polkadot_overseer::forward_events(overseer_client, overseer_handler_clone);
+			let forward = pnu_overseer::forward_events(overseer_client, overseer_handler_clone);
 
 			let forward = forward.fuse();
 			let overseer_fut = overseer.run().fuse();

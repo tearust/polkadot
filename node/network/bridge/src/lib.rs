@@ -38,7 +38,7 @@ use polkadot_subsystem::messages::{
 	CollatorProtocolMessage,
 };
 use polkadot_primitives::v1::{AuthorityDiscoveryId, Block, Hash, BlockNumber};
-use polkadot_node_network_protocol::{
+use pnn_protocol::{
 	ObservedRole, ReputationChange, PeerId, PeerSet, View, NetworkBridgeEvent, v1 as protocol_v1, OurView,
 };
 
@@ -132,7 +132,7 @@ pub trait Network: Send + 'static {
 
 impl Network for Arc<sc_network::NetworkService<Block, Hash>> {
 	fn event_stream(&mut self) -> BoxStream<'static, NetworkEvent> {
-		sc_network::NetworkService::event_stream(self, "polkadot-network-bridge").boxed()
+		sc_network::NetworkService::event_stream(self, "pnn-bridge").boxed()
 	}
 
 	#[tracing::instrument(level = "trace", skip(self), fields(subsystem = LOG_TARGET))]
@@ -762,10 +762,10 @@ mod tests {
 	use assert_matches::assert_matches;
 
 	use polkadot_subsystem::messages::{StatementDistributionMessage, BitfieldDistributionMessage};
-	use polkadot_node_subsystem_test_helpers::{
+	use pnu_subsystem_test_helpers::{
 		SingleItemSink, SingleItemStream, TestSubsystemContextHandle,
 	};
-	use polkadot_node_network_protocol::view;
+	use pnn_protocol::view;
 	use sc_network::Multiaddr;
 	use sp_keyring::Sr25519Keyring;
 
@@ -789,7 +789,7 @@ mod tests {
 		TestNetworkHandle,
 		TestAuthorityDiscovery,
 	) {
-		let (net_tx, net_rx) = polkadot_node_subsystem_test_helpers::single_item_sink();
+		let (net_tx, net_rx) = pnu_subsystem_test_helpers::single_item_sink();
 		let (action_tx, action_rx) = mpsc::unbounded();
 
 		(
@@ -906,7 +906,7 @@ mod tests {
 	fn test_harness<T: Future<Output=()>>(test: impl FnOnce(TestHarness) -> T) {
 		let pool = sp_core::testing::TaskExecutor::new();
 		let (network, network_handle, discovery) = new_test_network();
-		let (context, virtual_overseer) = polkadot_node_subsystem_test_helpers::make_subsystem_context(pool);
+		let (context, virtual_overseer) = pnu_subsystem_test_helpers::make_subsystem_context(pool);
 
 		let network_bridge = run_network(
 			network,

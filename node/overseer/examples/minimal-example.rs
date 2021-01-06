@@ -27,7 +27,7 @@ use futures::{
 use futures_timer::Delay;
 
 use polkadot_primitives::v1::{BlockData, PoV};
-use polkadot_overseer::{Overseer, AllSubsystems};
+use pnu_overseer::{Overseer, AllSubsystems};
 
 use polkadot_subsystem::{Subsystem, SubsystemContext, SpawnedSubsystem, FromOverseer};
 use polkadot_subsystem::messages::{

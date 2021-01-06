@@ -25,7 +25,7 @@ use futures::channel::mpsc;
 
 use sc_network::multiaddr::{Multiaddr, Protocol};
 use sc_authority_discovery::Service as AuthorityDiscoveryService;
-use polkadot_node_network_protocol::PeerId;
+use pnn_protocol::PeerId;
 use polkadot_primitives::v1::{AuthorityDiscoveryId, Block, Hash};
 
 const PRIORITY_GROUP: &'static str = "parachain_validators";

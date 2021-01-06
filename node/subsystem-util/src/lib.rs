@@ -24,12 +24,12 @@
 
 #![warn(missing_docs)]
 
-use polkadot_node_subsystem::{
+use pnu_subsystem::{
 	errors::RuntimeApiError,
 	messages::{AllMessages, RuntimeApiMessage, RuntimeApiRequest, RuntimeApiSender, BoundToRelayParent},
 	FromOverseer, SpawnedSubsystem, Subsystem, SubsystemContext, SubsystemError, SubsystemResult,
 };
-use polkadot_node_jaeger::JaegerSpan;
+use pnu_jaeger::JaegerSpan;
 use futures::{channel::{mpsc, oneshot}, prelude::*, select, stream::Stream};
 use futures_timer::Delay;
 use parity_scale_codec::Encode;
@@ -54,7 +54,7 @@ pub mod validator_discovery;
 /// These reexports are required so that external crates can use the `delegated_subsystem` macro properly.
 pub mod reexports {
 	pub use sp_core::traits::SpawnNamed;
-	pub use polkadot_node_subsystem::{
+	pub use pnu_subsystem::{
 		SpawnedSubsystem,
 		Subsystem,
 		SubsystemContext,
@@ -768,9 +768,9 @@ where
 		metrics: &Job::Metrics,
 		err_tx: &mut Option<mpsc::Sender<(Option<Hash>, JobsError<Job::Error>)>>,
 	) -> bool {
-		use polkadot_node_subsystem::ActiveLeavesUpdate;
-		use polkadot_node_subsystem::FromOverseer::{Communication, Signal};
-		use polkadot_node_subsystem::OverseerSignal::{ActiveLeaves, BlockFinalized, Conclude};
+		use pnu_subsystem::ActiveLeavesUpdate;
+		use pnu_subsystem::FromOverseer::{Communication, Signal};
+		use pnu_subsystem::OverseerSignal::{ActiveLeaves, BlockFinalized, Conclude};
 
 		match incoming {
 			Ok(Signal(ActiveLeaves(ActiveLeavesUpdate {
@@ -991,14 +991,14 @@ impl<F: Future> Future for Timeout<F> {
 mod tests {
 	use super::*;
 	use thiserror::Error;
-	use polkadot_node_subsystem::{
+	use pnu_subsystem::{
 		messages::{AllMessages, CandidateSelectionMessage}, ActiveLeavesUpdate, FromOverseer, OverseerSignal,
 		SpawnedSubsystem, JaegerSpan,
 	};
 	use assert_matches::assert_matches;
 	use futures::{channel::mpsc, executor, StreamExt, future, Future, FutureExt, SinkExt};
 	use polkadot_primitives::v1::Hash;
-	use polkadot_node_subsystem_test_helpers::{self as test_helpers, make_subsystem_context};
+	use pnu_subsystem_test_helpers::{self as test_helpers, make_subsystem_context};
 	use std::{pin::Pin, time::Duration, sync::Arc};
 
 	// basic usage: in a nutshell, when you want to define a subsystem, just focus on what its jobs do;
