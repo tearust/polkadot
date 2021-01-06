@@ -36,6 +36,7 @@ use polkadot_primitives::v1::{
 use pnu_primitives::{
 	FromTableMisbehavior, Statement, SignedFullStatement, MisbehaviorReport, ValidationResult,
 };
+use pnu_jobs::{delegated_subsystem, FromJobCommand};
 use polkadot_subsystem::{
 	JaegerSpan, PerLeafSpan,
 	messages::{
@@ -51,8 +52,6 @@ use pnu_subsystem_util::{
 	request_validators,
 	request_from_runtime,
 	Validator,
-	delegated_subsystem,
-	FromJobCommand,
 	metrics::{self, prometheus},
 };
 use statement_table::{
@@ -928,7 +927,7 @@ impl CandidateBackingJob {
 	}
 }
 
-impl util::JobTrait for CandidateBackingJob {
+impl pnu_jobs::JobTrait for CandidateBackingJob {
 	type ToJob = CandidateBackingMessage;
 	type Error = Error;
 	type RunArgs = SyncCryptoStorePtr;

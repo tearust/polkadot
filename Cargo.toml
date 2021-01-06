@@ -52,6 +52,7 @@ members = [
 	"node/core/proposer",
 	"node/core/provisioner",
 	"node/core/runtime-api",
+	"node/jobs",
 	"node/network/bridge",
 	"node/network/pov-distribution",
 	"node/network/protocol",

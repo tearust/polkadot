@@ -4904,6 +4904,7 @@ dependencies = [
  "assert_matches",
  "bitvec",
  "futures 0.3.8",
+ "pnu-jobs",
  "pnu-primitives",
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
@@ -4926,6 +4927,7 @@ name = "pnc-bitfield-signing"
 version = "0.1.0"
 dependencies = [
  "futures 0.3.8",
+ "pnu-jobs",
  "pnu-subsystem",
  "pnu-subsystem-util",
  "polkadot-primitives",
@@ -4941,6 +4943,7 @@ name = "pnc-candidate-selection"
 version = "0.1.0"
 dependencies = [
  "futures 0.3.8",
+ "pnu-jobs",
  "pnu-subsystem",
  "pnu-subsystem-util",
  "polkadot-primitives",
@@ -5016,6 +5019,7 @@ dependencies = [
  "bitvec",
  "futures 0.3.8",
  "futures-timer 3.0.2",
+ "pnu-jobs",
  "pnu-subsystem",
  "pnu-subsystem-util",
  "polkadot-primitives",
@@ -5215,9 +5219,31 @@ dependencies = [
  "mick-jaeger",
  "parking_lot 0.11.1",
  "polkadot-primitives",
- "sc-network",
  "sp-core",
  "thiserror",
+]
+
+[[package]]
+name = "pnu-jobs"
+version = "0.1.0"
+dependencies = [
+ "assert_matches",
+ "async-trait",
+ "env_logger 0.8.2",
+ "futures 0.3.8",
+ "log",
+ "parking_lot 0.11.1",
+ "pin-project 1.0.3",
+ "pnu-jaeger",
+ "pnu-primitives",
+ "pnu-subsystem",
+ "pnu-subsystem-test-helpers",
+ "pnu-subsystem-util",
+ "polkadot-primitives",
+ "sp-core",
+ "streamunordered",
+ "thiserror",
+ "tracing",
 ]
 
 [[package]]
@@ -5362,7 +5388,6 @@ dependencies = [
  "substrate-prometheus-endpoint",
  "thiserror",
  "tracing",
- "tracing-futures",
 ]
 
 [[package]]
@@ -5392,29 +5417,22 @@ dependencies = [
 name = "pnu-subsystem-util"
 version = "0.1.0"
 dependencies = [
- "assert_matches",
  "async-trait",
- "env_logger 0.8.2",
  "futures 0.3.8",
  "futures-timer 3.0.2",
- "log",
  "parity-scale-codec",
  "parking_lot 0.11.1",
  "pin-project 1.0.3",
- "pnu-jaeger",
  "pnu-primitives",
  "pnu-subsystem",
- "pnu-subsystem-test-helpers",
  "polkadot-primitives",
  "sc-network",
  "sp-application-crypto",
  "sp-core",
  "sp-keystore",
- "streamunordered",
  "substrate-prometheus-endpoint",
  "thiserror",
  "tracing",
- "tracing-futures",
 ]
 
 [[package]]
