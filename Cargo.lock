@@ -5123,6 +5123,7 @@ dependencies = [
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
+ "pnu-validator-discovery",
  "polkadot-primitives",
  "sp-core",
  "sp-keyring",
@@ -5143,6 +5144,7 @@ dependencies = [
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
+ "pnu-validator-discovery",
  "polkadot-primitives",
  "sp-core",
  "sp-keyring",
@@ -5491,6 +5493,19 @@ dependencies = [
  "tokio 0.2.21",
  "tracing",
  "tracing-futures",
+]
+
+[[package]]
+name = "pnu-validator-discovery"
+version = "0.1.0"
+dependencies = [
+ "futures 0.3.8",
+ "pnu-subsystem",
+ "pnu-subsystem-util",
+ "polkadot-primitives",
+ "sc-network",
+ "streamunordered",
+ "thiserror",
 ]
 
 [[package]]

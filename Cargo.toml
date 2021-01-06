@@ -68,6 +68,7 @@ members = [
 	"node/jaeger",
 	"node/test/client",
 	"node/test/service",
+	"node/validator-discovery",
 	"parachain/test-parachains",
 	"parachain/test-parachains/adder",
 	"parachain/test-parachains/adder/collator",
