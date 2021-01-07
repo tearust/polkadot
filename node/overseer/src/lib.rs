@@ -77,7 +77,7 @@ use futures_timer::Delay;
 use oorandom::Rand32;
 use streamunordered::{StreamYield, StreamUnordered};
 
-use polkadot_primitives::v1::{Block, BlockNumber, Hash};
+use pdot_primitives::v1::{Block, BlockNumber, Hash};
 use client::{BlockImportNotification, BlockchainEvents, FinalityNotification};
 
 use polkadot_subsystem::messages::{
@@ -1807,7 +1807,7 @@ mod tests {
 	use std::collections::HashMap;
 	use futures::{executor, pin_mut, select, channel::mpsc, FutureExt, pending};
 
-	use polkadot_primitives::v1::{BlockData, CollatorPair, PoV, CandidateHash};
+	use pdot_primitives::v1::{BlockData, CollatorPair, PoV, CandidateHash};
 	use polkadot_subsystem::{messages::RuntimeApiRequest, JaegerSpan};
 	use pnu_primitives::{Collation, CollationGenerationConfig};
 	use pnn_protocol::{PeerId, ReputationChange, NetworkBridgeEvent};

@@ -23,7 +23,7 @@
 async fn collating_using_adder_collator(task_executor: sc_service::TaskExecutor) {
 	use sp_keyring::AccountKeyring::*;
 	use futures::join;
-	use polkadot_primitives::v1::Id as ParaId;
+	use pdot_primitives::v1::Id as ParaId;
 
 	sc_cli::init_logger(
 		sc_cli::InitLoggerParams {

@@ -28,10 +28,10 @@ use serde::{Serialize, Deserialize};
 #[cfg(feature = "std")]
 use sp_core::bytes;
 
-use polkadot_core_primitives::{Hash, OutboundHrmpMessage};
+use pdot_core_primitives::{Hash, OutboundHrmpMessage};
 
 /// Block number type used by the relay chain.
-pub use polkadot_core_primitives::BlockNumber as RelayChainBlockNumber;
+pub use pdot_core_primitives::BlockNumber as RelayChainBlockNumber;
 
 /// Parachain head data included in the chain.
 #[derive(PartialEq, Eq, Clone, PartialOrd, Ord, Encode, Decode, RuntimeDebug, derive_more::From)]

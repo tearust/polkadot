@@ -29,7 +29,7 @@ use futures::{channel::{mpsc, oneshot}, prelude::*};
 use futures_timer::Delay;
 use parity_scale_codec::Encode;
 use pin_project::pin_project;
-use polkadot_primitives::v1::{
+use pdot_primitives::v1::{
 	CandidateEvent, CommittedCandidateReceipt, CoreState, EncodeAs, PersistedValidationData,
 	GroupRotationInfo, Hash, Id as ParaId, ValidationData, OccupiedCoreAssumption,
 	SessionIndex, Signed, SigningContext, ValidationCode, ValidatorId, ValidatorIndex, SessionInfo,

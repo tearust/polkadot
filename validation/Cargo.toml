@@ -1,12 +1,12 @@
 [package]
-name = "polkadot-validation"
+name = "pdot-validation"
 version = "0.8.27"
 authors = ["Parity Technologies <admin@parity.io>"]
 edition = "2018"
 
 [dependencies]
-polkadot-primitives = { path = "../primitives" }
-parachain = { package = "polkadot-parachain", path = "../parachain" }
+pdot-primitives = { path = "../primitives" }
+parachain = { package = "pdot-parachain", path = "../parachain" }
 sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "master" }
 sp-timestamp = { git = "https://github.com/paritytech/substrate", branch = "master" }
 sc-basic-authorship = { git = "https://github.com/paritytech/substrate", branch = "master" }

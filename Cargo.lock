@@ -2657,7 +2657,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "kusama-runtime"
+name = "runtime-kusama"
 version = "0.8.27"
 dependencies = [
  "bitvec",
@@ -2704,8 +2704,8 @@ dependencies = [
  "pallet-utility",
  "pallet-vesting",
  "parity-scale-codec",
- "polkadot-primitives",
- "polkadot-runtime-common",
+ "pdot-primitives",
+ "pdot-runtime-common",
  "rustc-hex",
  "separator",
  "serde",
@@ -4891,8 +4891,8 @@ dependencies = [
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
- "polkadot-erasure-coding",
- "polkadot-primitives",
+ "pdot-erasure-coding",
+ "pdot-primitives",
  "sc-service",
  "sp-core",
  "thiserror",
@@ -4912,9 +4912,9 @@ dependencies = [
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
- "polkadot-erasure-coding",
- "polkadot-primitives",
- "polkadot-statement-table",
+ "pdot-erasure-coding",
+ "pdot-primitives",
+ "pdot-statement-table",
  "sc-keystore",
  "sp-application-crypto",
  "sp-core",
@@ -4933,7 +4933,7 @@ dependencies = [
  "pnu-jobs",
  "pnu-subsystem",
  "pnu-subsystem-util",
- "polkadot-primitives",
+ "pdot-primitives",
  "sp-keystore",
  "thiserror",
  "tracing",
@@ -4949,7 +4949,7 @@ dependencies = [
  "pnu-jobs",
  "pnu-subsystem",
  "pnu-subsystem-util",
- "polkadot-primitives",
+ "pdot-primitives",
  "sp-core",
  "sp-keystore",
  "thiserror",
@@ -4968,8 +4968,8 @@ dependencies = [
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
- "polkadot-parachain",
- "polkadot-primitives",
+ "pdot-parachain",
+ "pdot-primitives",
  "sp-core",
  "sp-keyring",
  "tracing",
@@ -4985,7 +4985,7 @@ dependencies = [
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
- "polkadot-primitives",
+ "pdot-primitives",
  "sp-blockchain",
  "sp-core",
  "tracing",
@@ -5000,7 +5000,7 @@ dependencies = [
  "futures-timer 3.0.2",
  "pnu-overseer",
  "pnu-subsystem",
- "polkadot-primitives",
+ "pdot-primitives",
  "sc-basic-authorship",
  "sc-block-builder",
  "sc-client-api",
@@ -5025,7 +5025,7 @@ dependencies = [
  "pnu-jobs",
  "pnu-subsystem",
  "pnu-subsystem-util",
- "polkadot-primitives",
+ "pdot-primitives",
  "sp-application-crypto",
  "sp-keystore",
  "thiserror",
@@ -5041,7 +5041,7 @@ dependencies = [
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
- "polkadot-primitives",
+ "pdot-primitives",
  "sp-api",
  "sp-core",
  "tracing",
@@ -5060,8 +5060,8 @@ dependencies = [
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
- "polkadot-erasure-coding",
- "polkadot-primitives",
+ "pdot-erasure-coding",
+ "pdot-primitives",
  "sc-keystore",
  "sp-application-crypto",
  "sp-core",
@@ -5088,7 +5088,7 @@ dependencies = [
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
- "polkadot-primitives",
+ "pdot-primitives",
  "sp-application-crypto",
  "sp-core",
  "sp-keystore",
@@ -5108,7 +5108,7 @@ dependencies = [
  "pnn-protocol",
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
- "polkadot-primitives",
+ "pdot-primitives",
  "sc-authority-discovery",
  "sc-network",
  "sp-core",
@@ -5131,7 +5131,7 @@ dependencies = [
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
  "pnu-validator-discovery",
- "polkadot-primitives",
+ "pdot-primitives",
  "sp-core",
  "sp-keyring",
  "thiserror",
@@ -5152,7 +5152,7 @@ dependencies = [
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
  "pnu-validator-discovery",
- "polkadot-primitives",
+ "pdot-primitives",
  "sp-core",
  "sp-keyring",
  "thiserror",
@@ -5167,7 +5167,7 @@ dependencies = [
  "parity-scale-codec",
  "pnu-jaeger",
  "pnu-primitives",
- "polkadot-primitives",
+ "pdot-primitives",
  "sc-network",
 ]
 
@@ -5184,7 +5184,7 @@ dependencies = [
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
- "polkadot-primitives",
+ "pdot-primitives",
  "sc-keystore",
  "sp-application-crypto",
  "sp-core",
@@ -5204,8 +5204,8 @@ dependencies = [
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
- "polkadot-erasure-coding",
- "polkadot-primitives",
+ "pdot-erasure-coding",
+ "pdot-primitives",
  "sp-core",
  "thiserror",
  "tracing",
@@ -5221,7 +5221,7 @@ dependencies = [
  "log",
  "mick-jaeger",
  "parking_lot 0.11.1",
- "polkadot-primitives",
+ "pdot-primitives",
  "sp-core",
  "thiserror",
 ]
@@ -5242,7 +5242,7 @@ dependencies = [
  "pnu-subsystem",
  "pnu-subsystem-test-helpers",
  "pnu-subsystem-util",
- "polkadot-primitives",
+ "pdot-primitives",
  "sp-core",
  "streamunordered",
  "thiserror",
@@ -5263,7 +5263,7 @@ dependencies = [
  "pnu-primitives",
  "pnu-subsystem",
  "pnu-subsystem-util",
- "polkadot-primitives",
+ "pdot-primitives",
  "sc-client-api",
  "sp-core",
  "streamunordered",
@@ -5277,8 +5277,8 @@ version = "0.1.0"
 dependencies = [
  "futures 0.3.8",
  "parity-scale-codec",
- "polkadot-primitives",
- "polkadot-statement-table",
+ "pdot-primitives",
+ "pdot-statement-table",
  "sp-consensus-vrf",
  "sp-core",
  "sp-runtime",
@@ -5293,7 +5293,7 @@ dependencies = [
  "frame-system-rpc-runtime-api",
  "futures 0.3.8",
  "hex-literal",
- "kusama-runtime",
+ "runtime-kusama",
  "pallet-babe",
  "pallet-im-online",
  "pallet-staking",
@@ -5318,12 +5318,12 @@ dependencies = [
  "pnu-subsystem",
  "pnu-subsystem-util",
  "pnu-test-client",
- "polkadot-parachain",
- "polkadot-primitives",
- "polkadot-rpc",
- "polkadot-runtime",
- "polkadot-runtime-parachains",
- "rococo-runtime",
+ "pdot-parachain",
+ "pdot-primitives",
+ "pdot-rpc",
+ "pdot-runtime",
+ "pdot-runtime-parachains",
+ "runtime-rococo",
  "sc-authority-discovery",
  "sc-block-builder",
  "sc-chain-spec",
@@ -5361,7 +5361,7 @@ dependencies = [
  "thiserror",
  "tracing",
  "tracing-futures",
- "westend-runtime",
+ "runtime-westend",
 ]
 
 [[package]]
@@ -5384,8 +5384,8 @@ dependencies = [
  "pnu-jaeger",
  "pnu-primitives",
  "pnu-subsystem-test-helpers",
- "polkadot-primitives",
- "polkadot-statement-table",
+ "pdot-primitives",
+ "pdot-statement-table",
  "sc-network",
  "smallvec 1.6.0",
  "sp-core",
@@ -5408,8 +5408,8 @@ dependencies = [
  "pnu-primitives",
  "pnu-subsystem",
  "pnu-subsystem-util",
- "polkadot-primitives",
- "polkadot-statement-table",
+ "pdot-primitives",
+ "pdot-statement-table",
  "sc-network",
  "smallvec 1.6.0",
  "sp-core",
@@ -5429,7 +5429,7 @@ dependencies = [
  "pin-project 1.0.3",
  "pnu-primitives",
  "pnu-subsystem",
- "polkadot-primitives",
+ "pdot-primitives",
  "sc-network",
  "sp-application-crypto",
  "sp-core",
@@ -5446,8 +5446,8 @@ dependencies = [
  "parity-scale-codec",
  "pnu-subsystem",
  "pnu-test-service",
- "polkadot-primitives",
- "polkadot-test-runtime",
+ "pdot-primitives",
+ "pdot-test-runtime",
  "sc-block-builder",
  "sc-consensus",
  "sc-service",
@@ -5479,12 +5479,12 @@ dependencies = [
  "pnu-primitives",
  "pnu-service",
  "pnu-subsystem",
- "polkadot-parachain",
- "polkadot-primitives",
- "polkadot-rpc",
- "polkadot-runtime-common",
- "polkadot-runtime-parachains",
- "polkadot-test-runtime",
+ "pdot-parachain",
+ "pdot-primitives",
+ "pdot-rpc",
+ "pdot-runtime-common",
+ "pdot-runtime-parachains",
+ "pdot-test-runtime",
  "rand 0.8.1",
  "sc-authority-discovery",
  "sc-chain-spec",
@@ -5524,7 +5524,7 @@ dependencies = [
  "futures 0.3.8",
  "pnu-subsystem",
  "pnu-subsystem-util",
- "polkadot-primitives",
+ "pdot-primitives",
  "sc-network",
  "sp-core",
  "streamunordered",
@@ -5541,19 +5541,19 @@ dependencies = [
  "nix 0.19.1",
  "parity-util-mem",
  "pnu-service",
- "polkadot-cli",
+ "pdot-cli",
  "tempfile",
  "thiserror",
 ]
 
 [[package]]
-name = "polkadot-cli"
+name = "pdot-cli"
 version = "0.8.27"
 dependencies = [
  "frame-benchmarking-cli",
  "log",
  "pnu-service",
- "polkadot-parachain",
+ "pdot-parachain",
  "sc-cli",
  "sc-service",
  "sp-core",
@@ -5568,7 +5568,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "polkadot-core-primitives"
+name = "pdot-core-primitives"
 version = "0.7.30"
 dependencies = [
  "parity-scale-codec",
@@ -5578,11 +5578,11 @@ dependencies = [
 ]
 
 [[package]]
-name = "polkadot-erasure-coding"
+name = "pdot-erasure-coding"
 version = "0.8.27"
 dependencies = [
  "parity-scale-codec",
- "polkadot-primitives",
+ "pdot-primitives",
  "reed-solomon-erasure",
  "sp-core",
  "sp-trie",
@@ -5590,7 +5590,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "polkadot-parachain"
+name = "pdot-parachain"
 version = "0.8.27"
 dependencies = [
  "derive_more",
@@ -5598,7 +5598,7 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "parking_lot 0.11.1",
- "polkadot-core-primitives",
+ "pdot-core-primitives",
  "sc-executor",
  "serde",
  "shared_memory",
@@ -5612,15 +5612,15 @@ dependencies = [
 ]
 
 [[package]]
-name = "polkadot-primitives"
+name = "pdot-primitives"
 version = "0.8.27"
 dependencies = [
  "bitvec",
  "frame-system",
  "hex-literal",
  "parity-scale-codec",
- "polkadot-core-primitives",
- "polkadot-parachain",
+ "pdot-core-primitives",
+ "pdot-parachain",
  "pretty_assertions",
  "serde",
  "sp-api",
@@ -5640,13 +5640,13 @@ dependencies = [
 ]
 
 [[package]]
-name = "polkadot-rpc"
+name = "pdot-rpc"
 version = "0.8.27"
 dependencies = [
  "jsonrpc-core",
  "pallet-transaction-payment-rpc",
  "parity-scale-codec",
- "polkadot-primitives",
+ "pdot-primitives",
  "sc-chain-spec",
  "sc-client-api",
  "sc-consensus-babe",
@@ -5669,7 +5669,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "polkadot-runtime"
+name = "pdot-runtime"
 version = "0.8.27"
 dependencies = [
  "bitvec",
@@ -5714,8 +5714,8 @@ dependencies = [
  "pallet-utility",
  "pallet-vesting",
  "parity-scale-codec",
- "polkadot-primitives",
- "polkadot-runtime-common",
+ "pdot-primitives",
+ "pdot-runtime-common",
  "rustc-hex",
  "serde",
  "serde_derive",
@@ -5744,7 +5744,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "polkadot-runtime-common"
+name = "pdot-runtime-common"
 version = "0.8.27"
 dependencies = [
  "bitvec",
@@ -5767,8 +5767,8 @@ dependencies = [
  "pallet-treasury",
  "pallet-vesting",
  "parity-scale-codec",
- "polkadot-primitives",
- "polkadot-runtime-parachains",
+ "pdot-primitives",
+ "pdot-runtime-parachains",
  "rustc-hex",
  "serde",
  "serde_derive",
@@ -5790,7 +5790,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "polkadot-runtime-parachains"
+name = "pdot-runtime-parachains"
 version = "0.8.0"
 dependencies = [
  "bitvec",
@@ -5815,7 +5815,7 @@ dependencies = [
  "pallet-treasury",
  "pallet-vesting",
  "parity-scale-codec",
- "polkadot-primitives",
+ "pdot-primitives",
  "rand 0.8.1",
  "rand_chacha 0.3.0",
  "rustc-hex",
@@ -5840,16 +5840,16 @@ dependencies = [
 ]
 
 [[package]]
-name = "polkadot-statement-table"
+name = "pdot-statement-table"
 version = "0.8.27"
 dependencies = [
  "parity-scale-codec",
- "polkadot-primitives",
+ "pdot-primitives",
  "sp-core",
 ]
 
 [[package]]
-name = "polkadot-test-runtime"
+name = "pdot-test-runtime"
 version = "0.8.27"
 dependencies = [
  "bitvec",
@@ -5878,10 +5878,10 @@ dependencies = [
  "pallet-transaction-payment-rpc-runtime-api",
  "pallet-vesting",
  "parity-scale-codec",
- "polkadot-parachain",
- "polkadot-primitives",
- "polkadot-runtime-common",
- "polkadot-runtime-parachains",
+ "pdot-parachain",
+ "pdot-primitives",
+ "pdot-runtime-common",
+ "pdot-runtime-parachains",
  "rustc-hex",
  "serde",
  "serde_derive",
@@ -5908,14 +5908,14 @@ dependencies = [
 ]
 
 [[package]]
-name = "polkadot-validation"
+name = "pdot-validation"
 version = "0.8.27"
 dependencies = [
  "futures 0.3.8",
  "log",
  "parity-scale-codec",
- "polkadot-parachain",
- "polkadot-primitives",
+ "pdot-parachain",
+ "pdot-primitives",
  "sc-basic-authorship",
  "sc-block-builder",
  "sc-client-api",
@@ -6536,7 +6536,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "rococo-runtime"
+name = "runtime-rococo"
 version = "0.8.27"
 dependencies = [
  "frame-executive",
@@ -6559,10 +6559,10 @@ dependencies = [
  "pallet-transaction-payment",
  "pallet-transaction-payment-rpc-runtime-api",
  "parity-scale-codec",
- "polkadot-parachain",
- "polkadot-primitives",
- "polkadot-runtime-common",
- "polkadot-runtime-parachains",
+ "pdot-parachain",
+ "pdot-primitives",
+ "pdot-runtime-common",
+ "pdot-runtime-parachains",
  "serde",
  "serde_derive",
  "smallvec 1.6.0",
@@ -9063,7 +9063,7 @@ version = "0.8.27"
 dependencies = [
  "dlmalloc",
  "parity-scale-codec",
- "polkadot-parachain",
+ "pdot-parachain",
  "sp-io",
  "sp-std",
  "substrate-wasm-builder",
@@ -9082,9 +9082,9 @@ dependencies = [
  "pnu-service",
  "pnu-subsystem",
  "pnu-test-service",
- "polkadot-cli",
- "polkadot-parachain",
- "polkadot-primitives",
+ "pdot-cli",
+ "pdot-parachain",
+ "pdot-primitives",
  "sc-authority-discovery",
  "sc-cli",
  "sc-service",
@@ -9108,7 +9108,7 @@ name = "test-parachains"
 version = "0.7.22"
 dependencies = [
  "parity-scale-codec",
- "polkadot-parachain",
+ "pdot-parachain",
  "sp-core",
  "test-parachain-adder",
  "test-parachain-halt",
@@ -10226,7 +10226,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "westend-runtime"
+name = "runtime-westend"
 version = "0.8.27"
 dependencies = [
  "bitvec",
@@ -10272,9 +10272,9 @@ dependencies = [
  "pallet-utility",
  "pallet-vesting",
  "parity-scale-codec",
- "polkadot-parachain",
- "polkadot-primitives",
- "polkadot-runtime-common",
+ "pdot-parachain",
+ "pdot-primitives",
+ "pdot-runtime-common",
  "rustc-hex",
  "serde",
  "serde_derive",
@@ -10398,7 +10398,7 @@ version = "0.8.22"
 dependencies = [
  "frame-support",
  "parity-scale-codec",
- "polkadot-parachain",
+ "pdot-parachain",
  "sp-arithmetic",
  "sp-io",
  "sp-runtime",

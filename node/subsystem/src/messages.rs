@@ -30,7 +30,7 @@ use pnn_protocol::{
 use pnu_primitives::{
 	CollationGenerationConfig, MisbehaviorReport, SignedFullStatement, ValidationResult,
 };
-use polkadot_primitives::v1::{
+use pdot_primitives::v1::{
 	AuthorityDiscoveryId, AvailableData, BackedCandidate, BlockNumber, SessionInfo,
 	Header as BlockHeader, CandidateDescriptor, CandidateEvent, CandidateReceipt,
 	CollatorId, CommittedCandidateReceipt, CoreState, ErasureChunk,
@@ -404,7 +404,7 @@ pub enum RuntimeApiRequest {
 	/// Sends back `true` if the validation outputs pass all acceptance criteria checks.
 	CheckValidationOutputs(
 		ParaId,
-		polkadot_primitives::v1::CandidateCommitments,
+		pdot_primitives::v1::CandidateCommitments,
 		RuntimeApiSender<bool>,
 	),
 	/// Get the session index that a child of the block will have.

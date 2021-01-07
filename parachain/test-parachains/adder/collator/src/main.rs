@@ -18,7 +18,7 @@
 
 use pnu_primitives::CollationGenerationConfig;
 use pnu_subsystem::messages::{CollationGenerationMessage, CollatorProtocolMessage};
-use polkadot_primitives::v1::Id as ParaId;
+use pdot_primitives::v1::Id as ParaId;
 use sc_cli::{Result, Error as SubstrateCliError, Role, SubstrateCli};
 use sp_core::hexdisplay::HexDisplay;
 use test_parachain_adder_collator::Collator;

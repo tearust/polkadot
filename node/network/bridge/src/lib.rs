@@ -37,7 +37,7 @@ use polkadot_subsystem::messages::{
 	BitfieldDistributionMessage, PoVDistributionMessage, StatementDistributionMessage,
 	CollatorProtocolMessage,
 };
-use polkadot_primitives::v1::{AuthorityDiscoveryId, Block, Hash, BlockNumber};
+use pdot_primitives::v1::{AuthorityDiscoveryId, Block, Hash, BlockNumber};
 use pnn_protocol::{
 	ObservedRole, ReputationChange, PeerId, PeerSet, View, NetworkBridgeEvent, v1 as protocol_v1, OurView,
 };

@@ -83,7 +83,7 @@ use runtime_parachains::reward_points::RewardValidatorsWithEraPoints;
 pub use pallet_balances::Call as BalancesCall;
 pub use pallet_staking::StakerStatus;
 
-use polkadot_parachain::primitives::Id as ParaId;
+use pdot_parachain::primitives::Id as ParaId;
 use xcm::v0::{MultiLocation, NetworkId};
 use xcm_executor::traits::IsConcrete;
 use xcm_builder::{

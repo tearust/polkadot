@@ -18,7 +18,7 @@
 
 pub use sp_consensus_vrf::schnorrkel::{VRFOutput, VRFProof};
 
-use polkadot_primitives::v1::{
+use pdot_primitives::v1::{
 	CandidateHash, Hash, ValidatorIndex, Signed, ValidatorSignature, CoreIndex,
 };
 use parity_scale_codec::{Encode, Decode};

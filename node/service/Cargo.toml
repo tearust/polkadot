@@ -63,18 +63,18 @@ thiserror = "1.0.23"
 # Polkadot
 pnc-proposer = { path = "../core/proposer" }
 pnu-overseer = { path = "../overseer" }
-polkadot-parachain = { path = "../../parachain" }
-polkadot-primitives = { path = "../../primitives" }
-polkadot-rpc = { path = "../../rpc" }
+pdot-parachain = { path = "../../parachain" }
+pdot-primitives = { path = "../../primitives" }
+pdot-rpc = { path = "../../rpc" }
 polkadot-subsystem = { package = "pnu-subsystem", path = "../subsystem" }
 pnu-subsystem-util = { path = "../subsystem-util" }
-polkadot-runtime-parachains = { path = "../../runtime/parachains" }
+pdot-runtime-parachains = { path = "../../runtime/parachains" }
 
 # Polkadot Runtimes
-polkadot-runtime = { path = "../../runtime/polkadot" }
-kusama-runtime = { path = "../../runtime/kusama" }
-westend-runtime = { path = "../../runtime/westend" }
-rococo-runtime = { path = "../../runtime/rococo" }
+pdot-runtime = { path = "../../runtime/polkadot" }
+runtime-kusama = { path = "../../runtime/kusama" }
+runtime-westend = { path = "../../runtime/westend" }
+runtime-rococo = { path = "../../runtime/rococo" }
 
 # Polkadot Subsystems
 pnn-bitfield-distribution = { path = "../network/bitfield-distribution", optional = true }
@@ -103,7 +103,7 @@ db = ["service/db"]
 full-node = [
 	"pnc-av-store",
 ]
-runtime-benchmarks = ["polkadot-runtime/runtime-benchmarks", "kusama-runtime/runtime-benchmarks", "westend-runtime/runtime-benchmarks"]
+runtime-benchmarks = ["pdot-runtime/runtime-benchmarks", "runtime-kusama/runtime-benchmarks", "runtime-westend/runtime-benchmarks"]
 real-overseer = [
 	"pnn-bitfield-distribution",
 	"pnn-availability-distribution",
